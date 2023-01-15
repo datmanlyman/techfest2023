@@ -17,6 +17,10 @@ def quiz():
 def result():
     return render_template('result.html')
 
+@app.route("/jobcard")
+def jobcard():
+    return render_template('jobcard.html')
+
 @app.route("/<path:path>")
 def render_service_worker(path):
     return send_from_directory('./direct_static', path)
