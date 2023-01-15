@@ -13,6 +13,7 @@ def home():
 def quiz():
     return render_template('quiz.html')
 
+
 @app.route("/<path:path>")
 def render_service_worker(path):
     return send_from_directory('./direct_static', path)
