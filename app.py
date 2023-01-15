@@ -13,6 +13,9 @@ def home():
 def quiz():
     return render_template('quiz.html')
 
+@app.route("/result")
+def result():
+    return render_template('result.html')
 
 @app.route("/<path:path>")
 def render_service_worker(path):
