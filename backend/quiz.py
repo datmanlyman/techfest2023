@@ -134,7 +134,7 @@ probabilityOfEach = LaplaceSmoothing(numberOfEach, totalJobClass)
 line = PlotLine(probabilityOfEach)
 jobQueues = [deque([i]) for i in range(5)]  # 1 deque is SWE, etc.
 viewQueue = DoublyLinkedList()
-for _ in range(6):
+for _ in range(5):
     job = GetJob(jobQueues, line, totalJobClass)
     if job is not None:
         viewQueue.insertTail(job)

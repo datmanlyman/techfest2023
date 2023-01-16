@@ -1,5 +1,18 @@
 const totalJobClass = 5
 let quizResults = [];
+let ranking = [];
+
+let object = {
+    'Software Engineering': {
+        picture: './static/images/careers/innovation.jpg',
+        title: 'Software Engineering',
+        example: 'Frontend Engineer, Backend Engineer, Full Stack Developer'
+    }, 'AI': {
+        picture: './static/images/careers/innovation.jpg',
+        title: 'Artificial Intelligence',
+        example: 'Frontend Engineer, Backend Engineer, Full Stack Developer'
+    }
+}
 
 for (let i = 0; i < totalJobClass; i++) {
     quizResults.push(0);
@@ -16,7 +29,6 @@ function heapSort() {
     let heap = quizResults;
     let map = createMap(heap);
     console.log(map)
-    let ranking = [];
     buildMaxHeap(heap);
 
     for (let endIdx = heap.length - 1; endIdx > 0; endIdx--) {
