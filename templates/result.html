@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>OKBoss</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/css/fontawesome-all.min.css') }}">
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='app/icons/icon-192x192.png') }}">
+</head>
+
+
+<body class="theme-light">
+    
+    <div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+        
+    <div id="page">
+        
+        <div class="header header-fixed header-logo-center header-auto-show">
+            <a href="index.html" class="header-title">Your Result</a>
+            <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" data-menu="menu-main" class="header-icon header-icon-4"><i class="fas fa-bars"></i></a>
+            <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-dark"><i class="fas fa-sun"></i></a>
+            <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-light"><i class="fas fa-moon"></i></a>
+        </div>
+        <div class="page-title page-title-fixed">
+            <h1>Your Result</h1>
+            <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-light" data-toggle-theme><i class="fa fa-moon"></i></a>
+            <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-dark" data-toggle-theme><i class="fa fa-lightbulb color-yellow-dark"></i></a>
+        </div>
+        <div class="page-title-clear"></div>
+
+
+    <div class="page-content"> 
+        <div class="card card-style bg-grey-light">
+                     
+            <div class="content mt-3">
+                <h1 class="font-24 font-800">Your Top 3 Picks</h1>
+                <p>Based on the quiz, here are the top 3 career paths we think would be relevant to you.</p>
+                <a href="#" data-menu="result 1">
+                    <div class="d-flex mb-3">
+                        <div class="align-self-center">
+                            <img src="static/images/careers/software-engineer.jpg" class="rounded-m me-3" width="90">
+                        </div>
+                        <div class="align-self-center">
+                            <h2 class="font-15 line-height-s mt-1 mb-n1">SWE</h2>
+                            <p class="mb-0 font-11 mt-2">
+                                <i class="fa fa-plus-circle color-green-dark pe-1"></i>Examples include: Frontend Engineer, Backend Engineer, Full stack developer
+                            </p>
+                        </div>
+                        <div class="ms-auto ps-3 align-self-center">
+                            <h2 class="font-18">1</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" data-menu="result 2">
+                    <div class="d-flex mb-3">
+                        <div class="align-self-center">
+                            <img src="static/images/careers/innovation.jpg" class="rounded-m me-3" width="90">
+                        </div>
+                        <div class="align-self-center">
+                            <h2 class="font-15 line-height-s mt-1 mb-n1">Artifiicial Intelligence</h2>
+                            <p class="mb-0 font-11 mt-2">
+                                <i class="fa fa-plus-circle color-green-dark pe-1"></i>Examples include: NLP engineer, AI engineer, Data scientist
+                            </p>
+                        </div>
+                        <div class="ms-auto ps-3 align-self-center">
+                            <h2 class="font-18">2</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" data-menu="result 3">
+                    <div class="d-flex mb-3">
+                        <div class="align-self-center">
+                            <img src="static/images/careers/cyber-security.jpg" class="rounded-m me-3" width="90">
+                        </div>
+                        <div class="align-self-center">
+                            <h2 class="font-15 line-height-s mt-1 mb-n1">Cyber Security</h2>
+                            <p class="mb-0 font-11 mt-2">
+                                <i class="fa fa-plus-circle color-green-dark pe-1"></i>Examples include: Malware Analyst, Penetration Tester, Security Architect
+                            </p>
+                        </div>
+                        <div class="ms-auto ps-3 align-self-center">
+                            <h2 class="font-18">3</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+    </div>
+    <!-- Page content ends here-->
+        
+
+<!-- Colors Menu-->
+<div id="menu-colors" class="menu menu-box-bottom rounded-m" data-menu-load="menu-colors.html" data-menu-height="480"></div>
+    
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/custom.js') }}"></script>
+</body>
+

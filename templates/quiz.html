@@ -5,7 +5,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>AppKit Mobile</title>
+<title>OKBoss</title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
 <div id="page">
     
     <div class="header header-fixed header-logo-center header-auto-show">
-        <a href="index.html" class="header-title">Quiz</a>
+        <a href="index.html" class="header-title">Welcome</a>
         <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
         <a href="#" data-menu="menu-main" class="header-icon header-icon-4"><i class="fas fa-bars"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-dark"><i class="fas fa-sun"></i></a>
@@ -29,7 +29,7 @@
     </div>
     
     <div class="page-title page-title-fixed">
-        <h1>Quiz</h1>
+        <h1>Welcome</h1>
         <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-light" data-toggle-theme><i class="fa fa-moon"></i></a>
         <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-dark" data-toggle-theme><i class="fa fa-lightbulb color-yellow-dark"></i></a>
     </div>
@@ -38,15 +38,23 @@
     <div class="page-content">
         
         
-        <div class="card card-style">
+        <div class="card card-style bg-yellow-dark">
             <div class="content">
-                <p class="mb-n1 color-highlight font-600">Full Screen</p>
-                <h1>Modal Quiz</h1>
+                <h1>Career Path Quiz</h1>
                 <p>
-                    Using our menus system you can create incredibly awesome quizes that will rock your your mobile
-                    experience.
+                    Using our career path quiz, determine which career is best suited to your personality.
                 </p>
                 <a href="#" data-menu="quiz-1" class="btn btn-m btn-full gradient-highlight rounded-s font-600 font-13">Take the Quiz</a>
+            </div>
+        </div>
+
+        <div class="card card-style bg-green-dark">
+            <div class="content">
+                <h1>View Jobs</h1>
+                <p>
+                    Search through available jobs that are reccomended for you. It is reccomended you take the quiz before you start your hunt. Good luck!
+                </p>
+                <a href= 'jobcard' class="btn btn-m btn-full gradient-highlight rounded-s font-600 font-13">Start Job Search</a>
             </div>
         </div>
     </div>
@@ -60,144 +68,537 @@
         <a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
         <div class="card-center">
             <div class="content">
-                <h1 class="font-36">Mobile Quiz</h1>
-                <p class="mt-n2 color-highlight font-600 font-12">A small quiz demo for Appkit  by Enabled</p>
+                <h1 class="font-36">Are you ready to find out your career path?</h1>
                 <p>
-                    This quiz will have multiple style of designs for each slide. Simply click next to view all pages.<br><br>
-                    <strong class="color-theme font-10 font-500">Please note this is a template and not connected to a database.</strong>
+                    This quiz will help you find a suitable career path. However, do note that you are always free to choose whichever career you want.<br><br>
                 </p>
-                <a href="#" data-menu="quiz-2" class="btn btn-m font-600 gradient-blue">Click to Start</a>
+                <a href="#" data-menu="qn-1" class="btn btn-m font-600 gradient-blue">Click to Start</a>
             </div>
         </div>
     </div>
     
-    <!-- Quiz 2 -->
-    <div id="quiz-2"
+    <!-- Question 1 -->
+    <div id="qn-1"
          class="menu menu-box-modal rounded-0"
          data-menu-width="cover"
          data-menu-height="cover">
         <a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
         <div class="card-center">
             <div class="content">
-                <h1 class="font-24">How much of the Mobile Web Traffic do you think comes from Mobile devices?</h1>
+                <h6>
+                    Qn 1 of 10
+                </h6>
+                <h1 class="font-24">If you were to create a self-driving mini-car, what role would you take? </h1>
                 
                 <div class="mt-4 pt-3"></div>
                 
                 <div class="form-check icon-check">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
-                    <label class="form-check-label" for="radio1">Under 50%</label>
+                    <label class="form-check-label" for="radio1">Algo / UI, come up with the path of the robot or design the web interface</label>
                     <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
                     <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
                 </div>
                 <div class="form-check icon-check">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
-                    <label class="form-check-label" for="radio12">Over 50%</label>
+                    <label class="form-check-label" for="radio12">Security, ensure the robot doesnt get hacked</label>
                     <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
                     <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
                 </div>
                 <div class="form-check icon-check">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
-                    <label class="form-check-label" for="radio123">I'm not sure.</label>
+                    <label class="form-check-label" for="radio123">Hardware, control the movement of the robot</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+                </div>
+                <div class="form-check icon-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                    <label class="form-check-label" for="radio123">CV, recognise different images and carry out tasks based on that</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+                </div>
+                <div class="form-check icon-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                    <label class="form-check-label" for="radio123">RPi, the brains of the whole robot</label>
                     <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
                     <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
                 </div>
                 <div class="mt-4 pt-3"></div>
-                
-                <a href="#" data-menu="quiz-3" class="btn btn-m font-600 gradient-blue">Next Question</a>
+                <a href="#" data-menu="qn-2" class="btn btn-m font-600 gradient-blue">Next Question</a>
             </div>
         </div>
     </div>
     
-    <!-- Quiz 3 -->
-    <div id="quiz-3"
+
+    <!-- Question 2 -->
+    <div id="qn-2"
          class="menu menu-box-modal rounded-0"
          data-menu-width="cover"
          data-menu-height="cover">
         <a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
         <div class="card-center">
             <div class="content">
-                <h1 class="font-24">Thinking of you, which operating system defines you better?</h1>
+                <h6>
+                    Qn 2 of 10
+                </h6>
+                <h1 class="font-24">How often do you do leetcode? </h1>
                 
                 <div class="mt-4 pt-3"></div>
                 
                 <div class="form-check icon-check">
-                    <input class="form-check-input" type="checkbox" value="" id="check3">
-                    <label class="form-check-label" for="check3">Android</label>
-                    <i class="icon-check-1 far fa-square color-gray-dark font-16"></i>
-                    <i class="icon-check-2 fa fa-check-square font-16 color-highlight"></i>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
+                    <label class="form-check-label" for="radio1">Everyday</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
                 </div>
                 <div class="form-check icon-check">
-                    <input class="form-check-input" type="checkbox" value="" id="check31">
-                    <label class="form-check-label" for="check31">iOS</label>
-                    <i class="icon-check-1 far fa-square color-gray-dark font-16"></i>
-                    <i class="icon-check-2 fa fa-check-square font-16 color-highlight"></i>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
+                    <label class="form-check-label" for="radio12">Once a week</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
                 </div>
                 <div class="form-check icon-check">
-                    <input class="form-check-input" type="checkbox" value="" id="check312">
-                    <label class="form-check-label" for="check312">KaiOS</label>
-                    <i class="icon-check-1 far fa-square color-gray-dark font-16"></i>
-                    <i class="icon-check-2 fa fa-check-square font-16 color-highlight"></i>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                    <label class="form-check-label" for="radio123">What is leetcode?</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
                 </div>
                 <div class="form-check icon-check">
-                    <input class="form-check-input" type="checkbox" value="" id="check31234">
-                    <label class="form-check-label" for="check31234">Enabled OS</label>
-                    <i class="icon-check-1 far fa-square color-gray-dark font-16"></i>
-                    <i class="icon-check-2 fa fa-check-square font-16 color-highlight"></i>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                    <label class="form-check-label" for="radio123">Once a week</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
                 </div>
-                
+                <div class="form-check icon-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                    <label class="form-check-label" for="radio123">Once a month</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+                </div>
                 <div class="mt-4 pt-3"></div>
-
-                <a href="#" data-menu="quiz-4" class="btn btn-m font-600 gradient-blue">Next Question</a>
+                
+                <a href="#" data-menu="qn-3" class="btn btn-m font-600 gradient-blue">Next Question</a>
             </div>
         </div>
     </div>
-    
-    <!-- Quiz 4 -->
-    <div id="quiz-4"
+
+
+    <!-- Question 3 -->
+    <div id="qn-3"
          class="menu menu-box-modal rounded-0"
          data-menu-width="cover"
          data-menu-height="cover">
         <a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
         <div class="card-center">
-            <div class="content text-center">
-                
-                <img src="{{ url_for('static', filename='images/pictures/19t.jpg') }}" class="mx-auto rounded-m mb-4" width="250">
-                
-                <h1 class="font-22">Guess the Phone in the Image</h1>
-                
-                <div class="mt-4 pt-3"></div>
-                
-                <div class="form-check icon-check">
-                    <input class="form-check-input" type="radio" name="radio-test" value="" id="check2">
-                    <label class="form-check-label" for="check2">iPhone</label>
-                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
-                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
-                </div>
-                <div class="form-check icon-check">
-                    <input class="form-check-input" type="radio" name="radio-test" value="" id="check21">
-                    <label class="form-check-label" for="check21">Samsung</label>
-                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
-                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
-                </div>
-                <div class="form-check icon-check">
-                    <input class="form-check-input" type="radio" name="radio-test" value="" id="check212">
-                    <label class="form-check-label" for="check212">Huawei</label>
-                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
-                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
-                </div>
-                <div class="form-check icon-check">
-                    <input class="form-check-input" type="radio" name="radio-test" value="" id="check21234">
-                    <label class="form-check-label" for="check21234">Lenovo</label>
-                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
-                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
-                </div>
+            <div class="content">
+                <h6>
+                    Qn 3 of 10
+                </h6>
+                <h1 class="font-24">If you were not a computer science / engineering major, what would your job be?</h1>
                 
                 <div class="mt-4 pt-3"></div>
-
-                <a href="#" class="close-menu btn btn-m font-600 gradient-blue">End Test</a>
+                
+                <div class="form-check icon-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
+                    <label class="form-check-label" for="radio1">Jobless</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+                </div>
+                <div class="form-check icon-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
+                    <label class="form-check-label" for="radio12">Security guard</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+                </div>
+                <div class="form-check icon-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                    <label class="form-check-label" for="radio123">Some other engineer</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+                </div>
+                <div class="form-check icon-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                    <label class="form-check-label" for="radio123">Mathematician</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+                </div>
+                <div class="form-check icon-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                    <label class="form-check-label" for="radio123">Businessman</label>
+                    <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                    <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+                </div>
+                <div class="mt-4 pt-3"></div>
+                
+                <a href="#" data-menu="qn-4" class="btn btn-m font-600 gradient-blue">Next Question</a>
             </div>
         </div>
     </div>
+    
+     <!-- Question 4 -->
+     <div id="qn-4"
+     class="menu menu-box-modal rounded-0"
+     data-menu-width="cover"
+     data-menu-height="cover">
+    <a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
+    <div class="card-center">
+        <div class="content">
+            <h6>
+                Qn 4 of 10
+            </h6>
+            <h1 class="font-24">Among the few, what would you spend your free time doing?</h1>
+            
+            <div class="mt-4 pt-3"></div>
+            
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
+                <label class="form-check-label" for="radio1">Leetcoding</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
+                <label class="form-check-label" for="radio12">Learning to break things</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                <label class="form-check-label" for="radio123">Tinkering with stuff</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                <label class="form-check-label" for="radio123">Looking at what things to improve by digitalizing them</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                <label class="form-check-label" for="radio123">Looking at how to optimise connections</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="mt-4 pt-3"></div>
+            
+            <a href="#" data-menu="qn-5" class="btn btn-m font-600 gradient-blue">Next Question</a>
+        </div>
+    </div>
+</div>
+
+     <!-- Question 5 -->
+     <div id="qn-5"
+     class="menu menu-box-modal rounded-0"
+     data-menu-width="cover"
+     data-menu-height="cover">
+    <a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
+    <div class="card-center">
+        <div class="content">
+            <h6>
+                Qn 5 of 10
+            </h6>
+            <h1 class="font-24">Which of these statements do you agree with most?</h1>
+            
+            <div class="mt-4 pt-3"></div>
+            
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
+                <label class="form-check-label" for="radio1">I am an artistic person - I love drawing or designing.</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
+                <label class="form-check-label" for="radio12">I am a creative person who thinks out of the box.</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                <label class="form-check-label" for="radio123">I love tinkering and creating minature projects in my free time.</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                <label class="form-check-label" for="radio123">I love coming up with new ideas for things.</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="form-check icon-check">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+                <label class="form-check-label" for="radio123">I am a logical person - I love math and science.</label>
+                <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+                <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+            </div>
+            <div class="mt-4 pt-3"></div>
+            
+            <a href="#" data-menu="qn-6" class="btn btn-m font-600 gradient-blue">Next Question</a>
+        </div>
+    </div>
+</div>
+
+ <!-- Question 6 -->
+ <div id="qn-6"
+ class="menu menu-box-modal rounded-0"
+ data-menu-width="cover"
+ data-menu-height="cover">
+<a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
+<div class="card-center">
+    <div class="content">
+        <h6>
+            Qn 6 of 10
+        </h6>
+        <h1 class="font-24">What is 2 + 2?</h1>
+        
+        <div class="mt-4 pt-3"></div>
+        
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
+            <label class="form-check-label" for="radio1">22</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
+            <label class="form-check-label" for="radio12">100 subscript 2</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">4</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">Epoch 1/100...</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">It depends</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="mt-4 pt-3"></div>
+        
+        <a href="#" data-menu="qn-7" class="btn btn-m font-600 gradient-blue">Next Question</a>
+    </div>
+</div>
+</div>
+
+ <!-- Question 7 -->
+ <div id="qn-7"
+ class="menu menu-box-modal rounded-0"
+ data-menu-width="cover"
+ data-menu-height="cover">
+<a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
+<div class="card-center">
+    <div class="content">
+        <h6>
+            Qn 7 of 10
+        </h6>
+        <h1 class="font-24">How would you describe yourself?</h1>
+        
+        <div class="mt-4 pt-3"></div>
+        
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
+            <label class="form-check-label" for="radio1">Enthusiastic and bubbly</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
+            <label class="form-check-label" for="radio12">Boring and nerdy</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">Scary</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">Learning as you grow</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">Analytical</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="mt-4 pt-3"></div>
+        
+        <a href="#" data-menu="qn-8" class="btn btn-m font-600 gradient-blue">Next Question</a>
+    </div>
+</div>
+</div>
+
+ <!-- Question 8 -->
+ <div id="qn-8"
+ class="menu menu-box-modal rounded-0"
+ data-menu-width="cover"
+ data-menu-height="cover">
+<a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
+<div class="card-center">
+    <div class="content">
+        <h6>
+            Qn 8 of 10
+        </h6>
+        <h1 class="font-24">When you see a cool new thing like a gadget or an app, do you think:</h1>
+        
+        <div class="mt-4 pt-3"></div>
+        
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
+            <label class="form-check-label" for="radio1">AWESOME!!!!</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
+            <label class="form-check-label" for="radio12">How to break it?</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">Not related to me</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">I wonder how it works</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">What goes along in the background?</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="mt-4 pt-3"></div>
+        
+        <a href="#" data-menu="qn-9" class="btn btn-m font-600 gradient-blue">Next Question</a>
+    </div>
+</div>
+</div>
+
+ <!-- Question 9 -->
+ <div id="qn-9"
+ class="menu menu-box-modal rounded-0"
+ data-menu-width="cover"
+ data-menu-height="cover">
+<a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
+<div class="card-center">
+    <div class="content">
+        <h6>
+            Qn 9 of 10
+        </h6>
+        <h1 class="font-24">Which of these statements best describes you during a group discussion?</h1>
+        
+        <div class="mt-4 pt-3"></div>
+        
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
+            <label class="form-check-label" for="radio1">I will listen to what the manager or the leader has to say and follow along.</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
+            <label class="form-check-label" for="radio12">I dont understand it at all, but I will put in the effort to find out on my own.</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">I tend to stick to my thoughts and say what is on my mind</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">I learn as the meeting goes</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">I dont understand it at all, but I will find out immediately by asking.</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="mt-4 pt-3"></div>
+        
+        <a href="#" data-menu="qn-10" class="btn btn-m font-600 gradient-blue">Next Question</a>
+    </div>
+</div>
+</div>
+
+ <!-- Question 10 -->
+ <div id="qn-10"
+ class="menu menu-box-modal rounded-0"
+ data-menu-width="cover"
+ data-menu-height="cover">
+<a href="#" class="close-menu icon icon-xs rounded-xl bg-red-dark mt-3 float-end me-3"><i class="fa fa-times"></i></a>
+<div class="card-center">
+    <div class="content">
+        <h6>
+            Qn 10 of 10
+        </h6>
+        <h1 class="font-24">Given a chance, who / what would you use to give a speech?</h1>
+        
+        <div class="mt-4 pt-3"></div>
+        
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio1">
+            <label class="form-check-label" for="radio1">Someone else, not me can already</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio12">
+            <label class="form-check-label" for="radio12">Takes MC on presentation day</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">Just whack only</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">An NLP AI</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="form-check icon-check">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" value="" id="radio123">
+            <label class="form-check-label" for="radio123">Gives the speech</label>
+            <i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+            <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
+        </div>
+        <div class="mt-4 pt-3"></div>
+        <a href='result' class="close-menu btn btn-m font-600 gradient-blue">Show me my result!</a>
+    </div>
+</div>
+</div>
+</div>
+
+ 
     <!-- Colors Menu-->
     <div id="menu-colors" class="menu menu-box-bottom rounded-m" data-menu-load="menu-colors.html" data-menu-height="480"></div>
     
