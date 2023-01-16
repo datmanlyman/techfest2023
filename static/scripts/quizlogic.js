@@ -1,7 +1,8 @@
 var quizResults = [];
 
 function getAnswer() {
-    var radioID = document.querySelector('input[name="inlineRadioOptions"]:checked').id;
+    var radioID = document.querySelector('input[name="inlineRadioOptions1"]:checked').id;
+    console.log(radioID)
     var result = radioID.substring(radioID.length - 1);
 
     switch (result) {
@@ -22,5 +23,5 @@ function getAnswer() {
             break;
     }
 
-    console.log(quizResults)
+    console.log(quizResults);
 }

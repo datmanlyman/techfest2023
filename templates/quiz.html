@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/css/fontawesome-all.min.css') }}">
 <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='app/icons/icon-192x192.png') }}">
+<script type="text/javascript" src="/static/scripts/quiz.js"></script>
 </head>
     
 <body class="theme-light">
@@ -123,7 +124,7 @@
                     <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
                 </div>
                 <div class="mt-4 pt-5"></div>
-                <a href="#" data-menu="qn-2" class="btn btn-m font-600 gradient-blue" onclick="getAnswer()">Next Question</a>
+                <button href="#" data-menu = "qn-2" class="btn btn-m font-600 gradient-blue" onclick="getAnswer();">Next Question</button>
             </div>
         </div>
     </div>
@@ -176,7 +177,7 @@
                 </div>
                 <div class="mt-4 pt-3"></div>
                 
-                <a href="#" data-menu="qn-3" class="btn btn-m font-600 gradient-blue" onclick="getAnswer()">Next Question</a>
+                <a href="#" data-menu="qn-3" class="btn btn-m font-600 gradient-blue" onclick="getAnswer();">Next Question</a>
             </div>
         </div>
     </div>
@@ -229,7 +230,7 @@
                 </div>
                 <div class="mt-4 pt-3"></div>
                 
-                <a href="#" data-menu="qn-4" class="btn btn-m font-600 gradient-blue" onclick="getAnswer()">Next Question</a>
+                <a href="#" data-menu="qn-4" class="btn btn-m font-600 gradient-blue" onclick="getAnswer();">Next Question</a>
             </div>
         </div>
     </div>
@@ -281,7 +282,7 @@
             </div>
             <div class="mt-4 pt-3"></div>
             
-            <a href="#" data-menu="qn-5" class="btn btn-m font-600 gradient-blue" onclick="getAnswer()">Next Question</a>
+            <a href="#" data-menu="qn-5" class="btn btn-m font-600 gradient-blue" onclick="getAnswer();">Next Question</a>
         </div>
     </div>
 </div>
@@ -333,7 +334,7 @@
             </div>
             <div class="mt-4 pt-3"></div>
             
-            <a href="#" data-menu="qn-6" class="btn btn-m font-600 gradient-blue" onclick="getAnswer()">Next Question</a>
+            <a href="#" data-menu="qn-6" class="btn btn-m font-600 gradient-blue" onclick="getAnswer();">Next Question</a>
         </div>
     </div>
 </div>
@@ -385,7 +386,7 @@
         </div>
         <div class="mt-4 pt-3"></div>
         
-        <a href="#" data-menu="qn-7" class="btn btn-m font-600 gradient-blue" onclick="getAnswer()">Next Question</a>
+        <a href="#" data-menu="qn-7" class="btn btn-m font-600 gradient-blue" onclick="getAnswer();">Next Question</a>
     </div>
 </div>
 </div>
@@ -437,7 +438,7 @@
         </div>
         <div class="mt-4 pt-3"></div>
         
-        <a href="#" data-menu="qn-8" class="btn btn-m font-600 gradient-blue" onclick="getAnswer()">Next Question</a>
+        <a href="#" data-menu="qn-8" class="btn btn-m font-600 gradient-blue" onclick="getAnswer();">Next Question</a>
     </div>
 </div>
 </div>
@@ -489,7 +490,7 @@
         </div>
         <div class="mt-4 pt-3"></div>
         
-        <a href="#" data-menu="qn-9" class="btn btn-m font-600 gradient-blue" onclick="getAnswer()">Next Question</a>
+        <a href="#" data-menu="qn-9" class="btn btn-m font-600 gradient-blue" onclick="getAnswer();">Next Question</a>
     </div>
 </div>
 </div>
@@ -541,7 +542,7 @@
         </div>
         <div class="mt-4 pt-3"></div>
         
-        <a href="#" data-menu="qn-10" class="btn btn-m font-600 gradient-blue" onclick="getAnswer()">Next Question</a>
+        <a href="#" data-menu="qn-10" class="btn btn-m font-600 gradient-blue" onclick="getAnswer();">Next Question</a>
     </div>
 </div>
 </div>
@@ -592,7 +593,7 @@
             <i class="icon-check-2 fa fa-check-circle font-16 color-highlight"></i>
         </div>
         <div class="mt-4 pt-3"></div>
-        <a href='result' class="close-menu btn btn-m font-600 gradient-blue" onclick="getAnswer()">Show me my result!</a>
+        <a href='result' class="close-menu btn btn-m font-600 gradient-blue" onclick="getAnswer();">Show me my result!</a>
     </div>
 </div>
 </div>
@@ -606,5 +607,4 @@
 
 <script type="text/javascript" src="{{ url_for('static', filename='scripts/bootstrap.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='scripts/custom.js') }}"></script>
-<script type="text/javascript" src="quiz.js"></script>
 </body>
