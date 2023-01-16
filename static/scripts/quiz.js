@@ -1,7 +1,7 @@
 var quizResults = [];
 
 function getAnswer() {
-    var radioID = document.querySelector('input[name="inlineRadioOptions1"]:checked').id;
+    var radioID = document.querySelector('input[name="inlineRadioOptions"]:checked').id;
     console.log(radioID)
     var result = radioID.substring(radioID.length - 1);
 
