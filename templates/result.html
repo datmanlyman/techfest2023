@@ -28,7 +28,7 @@
             title: 'Cyber Security',
             example: 'Malware Analyst, Penetration Tester, Security Architect'
         }, 'Hardware': {
-            picture: 'static/images/careers/innovation.jpg',
+            picture: 'static/images/careers/hardware.jpeg',
             title: 'Hardware',
             example: 'IoT Developer, Embedded Systems, Signal Processing'
         }, 'AI': {
@@ -36,7 +36,7 @@
             title: 'Artificial Intelligence',
             example: 'NLP Engineer, AI Engineer, Data Scientist'
         }, 'System Analyst': {
-            picture: 'static/images/careers/innovation.jpg',
+            picture: 'static/images/careers/system-analyst.webp',
             title: 'System Analyst',
             example: 'Software Analyst, Quality Engineer, System Analyst'
         }
@@ -49,7 +49,6 @@
             const picture = object[job]["picture"];
             const title = object[job]["title"];
             const example = object[job]["example"];
-            console.log(picture);
             document.getElementById("picture" + suffix).src = picture;
             document.getElementById("title" + suffix).innerHTML = title;
             document.getElementById("example" + suffix).innerHTML = example;
