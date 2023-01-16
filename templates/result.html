@@ -12,7 +12,54 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/css/fontawesome-all.min.css') }}">
 <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='app/icons/icon-192x192.png') }}">
-<script type="text/javascript" src="/static/scripts/quiz.js"></script>
+<script type="text/javascript">
+    const totalJobClass = 5;
+    const rankingAsAStr = localStorage.getItem("ranking");
+    const ranking = rankingAsAStr.split(',');
+    console.log(ranking);
+
+    let object = {
+        'Software Engineering': {
+            picture: 'static/images/careers/software-engineer.jpg',
+            title: 'Software Engineering',
+            example: 'Frontend Engineer, Backend Engineer, Full Stack Developer'
+        }, 'Cyber Security': {
+            picture: 'static/images/careers/cyber-security.jpg',
+            title: 'Cyber Security',
+            example: 'Malware Analyst, Penetration Tester, Security Architect'
+        }, 'Hardware': {
+            picture: 'static/images/careers/innovation.jpg',
+            title: 'Hardware',
+            example: 'IoT Developer, Embedded Systems, Signal Processing'
+        }, 'AI': {
+            picture: 'static/images/careers/innovation.jpg',
+            title: 'Artificial Intelligence',
+            example: 'NLP Engineer, AI Engineer, Data Scientist'
+        }, 'System Analyst': {
+            picture: 'static/images/careers/innovation.jpg',
+            title: 'System Analyst',
+            example: 'Software Analyst, Quality Engineer, System Analyst'
+        }
+    };
+
+    function showRanking() {
+        for (let idx = 0; idx < totalJobClass; idx++) {
+            const job = ranking[idx];
+            const suffix = idx + 1;
+            const picture = object[job]["picture"];
+            const title = object[job]["title"];
+            const example = object[job]["example"];
+            console.log(picture);
+            document.getElementById("picture" + suffix).src = picture;
+            document.getElementById("title" + suffix).innerHTML = title;
+            document.getElementById("example" + suffix).innerHTML = example;
+        }
+    }
+
+    window.onload = function() {
+        showRanking()
+    }
+</script>
 </head>
 
 

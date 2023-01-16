@@ -1,33 +1,9 @@
-const totalJobClass = 5
+const totalJobClass = 5;
 let quizResults = [];
 let ranking = [];
 
 for (let i = 0; i < totalJobClass; i++) {
     quizResults.push(0);
-}
-
-let object = {
-    'Software Engineering': {
-        picture: 'static/images/careers/software-engineer.jpg',
-        title: 'Software Engineering',
-        example: 'Frontend Engineer, Backend Engineer, Full Stack Developer'
-    }, 'Cyber Security': {
-        picture: 'static/images/careers/cyber-security.jpg',
-        title: 'Cyber Security',
-        example: 'Malware Analyst, Penetration Tester, Security Architect'
-    }, 'Hardware': {
-        picture: 'static/images/careers/innovation.jpg',
-        title: 'Hardware',
-        example: 'IoT Developer, Embedded Systems, Signal Processing'
-    }, 'AI': {
-        picture: 'static/images/careers/innovation.jpg',
-        title: 'Artificial Intelligence',
-        example: 'NLP Engineer, AI Engineer, Data Scientist'
-    }, 'System Analyst': {
-        picture: 'static/images/careers/innovation.jpg',
-        title: 'System Analyst',
-        example: 'Software Analyst, Quality Engineer, System Analyst'
-    }
 }
 
 function getAnswer() {
@@ -61,7 +37,8 @@ function heapSort() {
         ranking.push(jobClass);
     }
 
-    showRanking();
+    localStorage.setItem("ranking", ranking);
+    window.location.href = 'result';
 }
 
 function createMap(array) {
@@ -118,14 +95,4 @@ function swap(i, j, array) {
     const temp = array[j];
     array[j] = array[i];
     array[i] = temp;
-}
-
-function showRanking() {
-    for (let idx = 0; idx < totalJobClass; idx++) {
-        const job = ranking[idx];
-        picture, title, example = object[job];
-        document.getElementById("picture" + idx + 1).src = picture;
-        document.getElementById("title" + idx + 1).innerHTML = title;
-        document.getElementById("example" + idx + 1).innerHTML = example;
-    }
 }
