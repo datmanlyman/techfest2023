@@ -145,6 +145,7 @@ while viewQueue.head.next is not None:
 viewQueue.insertHead(1000)
 viewQueue.insertTail(100)
 viewQueue.view()
+
 # Recruiter side
 # Should get the names of the person that swipes
 # Should put in front
