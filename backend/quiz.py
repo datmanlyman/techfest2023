@@ -36,13 +36,16 @@ class DoublyLinkedList:
         if self.head is None:
             print("There is nothing!")
             return
+        if self.head.next is None:
+            node = self.head
+            self.head = None
+            return node
 
         node = self.head
         next = self.head.next
         next.prev = None
         self.head.next = None
         self.head = next
-
         return node
 
     def view(self):
@@ -129,7 +132,7 @@ totalJobClass = 5
 numberOfEach = GetQuizResults(quizResults, totalJobClass)
 probabilityOfEach = LaplaceSmoothing(numberOfEach, totalJobClass)
 line = PlotLine(probabilityOfEach)
-jobQueues = [deque([i]) for i in range(5)]
+jobQueues = [deque([i]) for i in range(5)]  # 1 deque is SWE, etc.
 viewQueue = DoublyLinkedList()
 for _ in range(6):
     job = GetJob(jobQueues, line, totalJobClass)
@@ -137,9 +140,12 @@ for _ in range(6):
         viewQueue.insertTail(job)
 
 viewQueue.view()
-
-
+while viewQueue.head.next is not None:
+    print(viewQueue.popHead().data)
+viewQueue.insertHead(1000)
+viewQueue.insertTail(100)
+viewQueue.view()
 # Recruiter side
 # Should get the names of the person that swipes
 # Should put in front
-applicantViewQueue = DoublyLinkedList()
+# applicantViewQueue = DoublyLinkedList()
