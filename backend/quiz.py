@@ -52,12 +52,12 @@ class DoublyLinkedList:
             node = node.next
 
 
-def LaplaceSmoothing(numberOfEach):  # Should be a single integer per row
+def LaplaceSmoothing(numberOfEach, totalJobClass):  # Should be a single integer per row
     totalNumber = sum(numberOfEach)  # For the total number
 
     for idx in range(len(numberOfEach)):
         numberOfEach[idx] = (numberOfEach[idx] + 1) / \
-            (totalNumber + 5)  # (n + 1)/(N + V)
+            (totalNumber + totalJobClass)  # (n + 1)/(N + V)
 
     return numberOfEach  # Should become floats
 
@@ -83,20 +83,19 @@ def GetJobType(line):
     return 0
 
 
-def GetJob(jobQueues, line):
-    seen = [0 for _ in range(5)]
+def GetJob(jobQueues, line, totalJobClass):
+    seen = [0 for _ in range(totalJobClass)]
     jobClass = GetJobType(line)
     seen[jobClass] = 1
     jobQueue = jobQueues[jobClass]
     while not jobQueue:
         jobClass = GetJobType(line)
         if seen[jobClass] == 1:
-            print(f"{jobClass} has already been accessed")
+            # print(f"{jobClass} has already been accessed")
             continue
         seen[jobClass] = 1
         jobQueue = jobQueues[jobClass]
         if not jobQueue and sum(seen) == 5:
-            print("All empty!")
             return
     return jobQueue.popleft()
 
@@ -106,12 +105,41 @@ def SetJob(viewQueue):
     return node.data
 
 
-numberOfEach = [3, 3, 1, 1, 2]
-probabilityOfEach = LaplaceSmoothing(numberOfEach)
+def GetQuizResults(quizResults, totalJobClass):
+    numberOfEach = [0 for _ in range(totalJobClass)]
+
+    for question in quizResults:
+        if question == "A":
+            numberOfEach[0] += 1
+        elif question == "B":
+            numberOfEach[1] += 1
+        elif question == "C":
+            numberOfEach[2] += 1
+        elif question == "D":
+            numberOfEach[3] += 1
+        elif question == "E":
+            numberOfEach[4] += 1
+
+    return numberOfEach
+
+
+# Applicant side
+quizResults = ["A", "B", "C", "D", "E", "A", "B", "C", "D", "E"]
+totalJobClass = 5
+numberOfEach = GetQuizResults(quizResults, totalJobClass)
+probabilityOfEach = LaplaceSmoothing(numberOfEach, totalJobClass)
 line = PlotLine(probabilityOfEach)
 jobQueues = [deque([i]) for i in range(5)]
 viewQueue = DoublyLinkedList()
 for _ in range(6):
-    viewQueue.insertTail(GetJob(jobQueues, line))
+    job = GetJob(jobQueues, line, totalJobClass)
+    if job is not None:
+        viewQueue.insertTail(job)
 
 viewQueue.view()
+
+
+# Recruiter side
+# Should get the names of the person that swipes
+# Should put in front
+applicantViewQueue = DoublyLinkedList()
