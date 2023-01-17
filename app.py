@@ -17,12 +17,12 @@ def quiz():
 def result():
     return render_template('result.html')
 
-@app.route("/details")
-def job_details():
-    return render_template('details.html')
+@app.route("/admin")
+def admin():
+    return render_template('admin.html')
 
-@app.route("/jobcard")
-def swipe_page():
+@app.route("/jobs")
+def jobcard():
     return render_template('jobcard.html')
 
 
