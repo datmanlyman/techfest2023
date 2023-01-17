@@ -16,6 +16,8 @@
     const totalJobClass = 5;
     const rankingAsAStr = localStorage.getItem("ranking");
     const ranking = rankingAsAStr.split(',');
+    const numbersAsAStr = localStorage.getItem('heap');
+    const numbers = numbersAsAStr.split(',')
     console.log(ranking);
 
     let object = {
@@ -43,6 +45,7 @@
     };
 
     function showRanking() {
+        const total = 10;
         for (let idx = 0; idx < totalJobClass; idx++) {
             const job = ranking[idx];
             const suffix = idx + 1;
@@ -52,6 +55,7 @@
             document.getElementById("picture" + suffix).src = picture;
             document.getElementById("title" + suffix).innerHTML = title;
             document.getElementById("example" + suffix).innerHTML = example;
+            document.getElementById("percentage" + suffix).innerHTML = ((parseInt(numbers[idx]) / total) * 100).toString() + "%";
         }
     }
 
@@ -100,7 +104,7 @@
                             </p>
                         </div>
                         <div class="ms-auto ps-3 align-self-center">
-                            <h2 class="font-18">1</h2>
+                            <h2 class="font-18" id="percentage1"></h2>
                         </div>
                     </div>
                 </a>
@@ -116,7 +120,7 @@
                             </p>
                         </div>
                         <div class="ms-auto ps-3 align-self-center">
-                            <h2 class="font-18">2</h2>
+                            <h2 class="font-18" id="percentage2"></h2>
                         </div>
                     </div>
                 </a>
@@ -132,7 +136,7 @@
                             </p>
                         </div>
                         <div class="ms-auto ps-3 align-self-center">
-                            <h2 class="font-18">3</h2>
+                            <h2 class="font-18" id="percentage3"></h2>
                         </div>
                     </div>
                 </a>
@@ -148,7 +152,7 @@
                             </p>
                         </div>
                         <div class="ms-auto ps-3 align-self-center">
-                            <h2 class="font-18">4</h2>
+                            <h2 class="font-18" id="percentage4"></h2>
                         </div>
                     </div>
                 </a>
@@ -164,7 +168,7 @@
                             </p>
                         </div>
                         <div class="ms-auto ps-3 align-self-center">
-                            <h2 class="font-18">5</h2>
+                            <h2 class="font-18" id="percentage5"></h2>
                         </div>
                     </div>
                 </a>

@@ -38,6 +38,7 @@ function heapSort() {
     }
 
     localStorage.setItem("ranking", ranking);
+    localStorage.setItem("heap", heap);
     window.location.href = 'result';
 }
 
