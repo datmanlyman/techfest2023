@@ -22,8 +22,8 @@ def admin():
     return render_template('admin.html')
 
 @app.route("/jobs")
-def swipe_page():
-    return render_template('swipe.html')
+def jobcard():
+    return render_template('jobcard.html')
 
 
 @app.route("/<path:path>")
