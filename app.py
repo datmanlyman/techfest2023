@@ -17,13 +17,13 @@ def quiz():
 def result():
     return render_template('result.html')
 
-@app.route("/jobcard")
-def jobcard():
-    return render_template('jobcard.html')
+@app.route("/details")
+def job_details():
+    return render_template('details.html')
 
-@app.route("/jobs")
+@app.route("/jobcard")
 def swipe_page():
-    return render_template('swipe.html')
+    return render_template('jobcard.html')
 
 
 @app.route("/<path:path>")
