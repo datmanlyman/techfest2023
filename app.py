@@ -17,9 +17,9 @@ def quiz():
 def result():
     return render_template('result.html')
 
-@app.route("/jobcard")
-def jobcard():
-    return render_template('jobcard.html')
+@app.route("/admin")
+def admin():
+    return render_template('admin.html')
 
 @app.route("/jobs")
 def swipe_page():
