@@ -21,7 +21,7 @@ def result():
 def admin():
     return render_template('admin.html')
 
-@app.route("/jobs")
+@app.route("/jobcard")
 def jobcard():
     return render_template('jobcard.html')
 
